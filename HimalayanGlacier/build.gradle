@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application' 
+}
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'HinduKush.HimalayanGlacier'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.register('helloWorld') {
+    doLast {
+        println("Hello, Gradle!")
+    }
+}
+
+tasks.build {
+    doLast {
+        println "Build finished! You can deploy now."
+    }
+}
+
